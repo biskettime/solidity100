@@ -15,8 +15,8 @@ contract StudentMGT {
     }
 
     function getStudent(uint _index) public view returns (string memory, uint, string[] memory) {
-        require(_index < students.length, "Invalid index"); // 배열 크기 검증
-        Student memory student = students[_index];          // 특정 학생 데이터 복사
+        require(_index < students.length, "Invalid index"); 
+        Student memory student = students[_index]; 
         return (student.name, student.number, student.course);
     }
 }
