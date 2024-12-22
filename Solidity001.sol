@@ -13,7 +13,11 @@ contract caculater{
     return _a*_b;
  }
  function div(uint _a, uint _b) public pure returns(uint){
+   if (_b==0){
+      revert("Division by zero is not allowed");
+   } else {
     return _a/_b;
+   }
  }
  function pow(uint _a, uint _b) public pure returns(uint){
     uint powr = 1;
